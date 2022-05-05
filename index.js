@@ -10,6 +10,7 @@ const stringDecoder = require('string_decoder').StringDecoder;
 const config = require('./lib/config');
 const handlers = require('./lib/handlers');
 const helpers = require('./lib/helpers');
+const path = require('path');
 
 
 // The server should respond to all requests with a string
@@ -23,13 +24,16 @@ const server = http.createServer((req, res) =>{
     const trimmedPath = path.replace(/^\/+|\/+$/g, '');
     
     // Get the query string as an object
+
     const queryStringObject = JSON.stringify(parsedUrl.query);
+
 
     // Get the http method
     const method = req.method.toLowerCase();
 
     // Get the headers as an object
     const headers = req.headers;
+
 
     // Get the payloads, if any
     const decoder = new stringDecoder('utf8');
@@ -83,5 +87,6 @@ server.listen(config.port, () => {
 // Defining Request routers
 const router = {
     'ping': handlers.ping,
-    'users': handlers.users
+    'users': handlers.users,
+    'tokens': handlers.tokens
 };
