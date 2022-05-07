@@ -10,8 +10,6 @@ const stringDecoder = require('string_decoder').StringDecoder;
 const config = require('./lib/config');
 const handlers = require('./lib/handlers');
 const helpers = require('./lib/helpers');
-const path = require('path');
-
 
 // The server should respond to all requests with a string
 const server = http.createServer((req, res) =>{
@@ -88,5 +86,6 @@ server.listen(config.port, () => {
 const router = {
     'ping': handlers.ping,
     'users': handlers.users,
-    'tokens': handlers.tokens
+    'tokens': handlers.tokens,
+    'tokens': handlers.checks
 };
