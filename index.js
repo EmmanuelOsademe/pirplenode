@@ -14,11 +14,13 @@ const app = {};
 app.init = () =>{
     // Start the server
     server.init();
+    
 
     // Start the Workers
     workers.init();
 }
 
+// Call the app init method to start up the app
 app.init();
 
 // Export
