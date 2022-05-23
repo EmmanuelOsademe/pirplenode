@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- General Purpose settings-->
+        <meta charset="utf-8">
+        <meta http-equiv="content-language" content="en-us">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <base href="{global.baseUrl}" />
+
+        <!-- Meta Tags -->
+        <title>{head.title} | {global.appName}</title>
+        <meta name="description" content="{head.description}">
+
+        <!-- Static Assets -->
+        <link type="image/x.icon" rel="icon" href="favicon.ico">
+        <script language="javascript" type="text/javascript" src="../public/app.js"></script>
+        <link type="text/css" rel="stylesheet" href="../public/app.css">
+
+    </head>
+    <body class="{body.class}">
+        <!-- <script type="text/javascript" src="../public/app.js"></script> -->
+        <!--Page Wrapper -->  
+        <div class="wrapper">
+            <!--Header-->
+            <header class="header">
+                <!-- Logo -->
+                <a class="logo" href="/">
+                    <img src="public/logo.png" alt="CompanyLogo">
+                </a>
+
+                <!-- Navigation -->
+                <nav>
+                    <ul class="menu">
+                        <li>
+                            <a href="/">Home</a>
+                        </li>
+                        <li>
+                            <a class="LoggedOut" href="/account/create">Sign up</a>
+                        </li>
+                        <li>
+                            <a class="LoggedOut" href="/seesion/create">Login</a>
+                        </li>
+                        <li>
+                            <a class="LoggedIn" href="/checks/all">Dashboard</a>
+                        </li>
+                        <li>
+                            <a class="LoggedIn" href="/account/edit">Account Setting</a>
+                        </li>
+                        <li>
+                            <a class="LoggedIn" href="#">Logout</a>
+                        </li>
+                    </ul>
+                </nav>
+
+            </header>
+    
+            <!--Page-specific Content-->
+            <div class="content">
+
+    
+  
